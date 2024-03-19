@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1>Add New Property</h1>
+{% if form.errors %}
+    <div class="alert alert-danger">
+        {% for field, errors in form.errors.items() %}
+            {% for error in errors %}
+                <p>{{ field|capitalize }}: {{ error }}</p>
+            {% endfor %}
+        {% endfor %}
+    </div>
+{% endif %}
+<form method="post" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <div>
+        {{ form.title.label }}<br>
+        {{ form.title }}
+    </div>
+    <div>
+        {{ form.description.label }}<br>
+        {{ form.description }}
+    </div>
+    <div>
+        {{ form.rooms.label }}
+        {{ form.rooms }}
+    </div>
+    <div>
+        {{ form.bathrooms.label }}<br>
+        {{ form.bathrooms }}
+    </div>
+    <div>
+        {{ form.price.label }}
+        {{ form.price }}
+    </div>
+    <div>
+        {{ form.property_type.label }}<br>
+        {{ form.property_type }}
+    </div>
+    <div>
+        {{ form.location.label }}<br>
+        {{ form.location }}
+    </div>
+    <div>
+        {{ form.photo.label }}<br>
+        {{ form.photo }}
+    </div>
+    <button type="submit">Add Property</button>
+</form>
+
+{% endblock %}
