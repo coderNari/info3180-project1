@@ -1,51 +1,49 @@
 {% extends "base.html" %}
 
 {% block main %}
-<h1>Add New Property</h1>
-{% if form.errors %}
-    <div class="alert alert-danger">
-        {% for field, errors in form.errors.items() %}
-            {% for error in errors %}
-                <p>{{ field|capitalize }}: {{ error }}</p>
-            {% endfor %}
-        {% endfor %}
-    </div>
-{% endif %}
-<form method="post" enctype="multipart/form-data">
-    {{ form.hidden_tag() }}
-    <div>
-        {{ form.title.label }}<br>
-        {{ form.title }}
-    </div>
-    <div>
-        {{ form.description.label }}<br>
-        {{ form.description }}
-    </div>
-    <div>
-        {{ form.rooms.label }}
-        {{ form.rooms }}
-    </div>
-    <div>
-        {{ form.bathrooms.label }}<br>
-        {{ form.bathrooms }}
-    </div>
-    <div>
-        {{ form.price.label }}
-        {{ form.price }}
-    </div>
-    <div>
-        {{ form.property_type.label }}<br>
-        {{ form.property_type }}
-    </div>
-    <div>
-        {{ form.location.label }}<br>
-        {{ form.location }}
-    </div>
-    <div>
-        {{ form.photo.label }}<br>
-        {{ form.photo }}
-    </div>
-    <button type="submit">Add Property</button>
-</form>
-
+<div class="heading">
+    <h1>Add New Property</h1>
+</div>
+<div class="add-property-form">
+    <form method="post" enctype="multipart/form-data">
+        {{ form.hidden_tag() }}
+        <div class="form-group">
+            <label for="title"><strong>Property Title:</strong></label>
+            {{ form.title }}
+        </div>
+        <div class="form-group">
+            <label for="description"><strong>Description:</strong></label>
+            {{ form.description }}
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="bedrooms"><strong>No. of Rooms:</strong></label>
+                {{ form.rooms }}
+            </div>
+            <div class="form-group">
+                <label for="bathrooms"><strong>No. of Bathrooms:</strong></label>
+                {{ form.bathrooms }}
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="price"><strong>Price:</strong></label>
+                {{ form.price }}
+            </div>
+            <div class="form-group">
+                <label for="property_type"><strong>Property Type:</strong></label>
+                {{ form.property_type }}
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="location"><strong>Location:</strong></label>
+            {{ form.location }}
+        </div>
+        <div class="form-group">
+            <label for="photo"><strong>Photo:</strong></label>
+            {{ form.photo }}
+        </div>
+        <button type="submit">Add Property</button>
+    </form>
+</div>
 {% endblock %}

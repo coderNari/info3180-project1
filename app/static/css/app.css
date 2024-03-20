@@ -1,3 +1,69 @@
 body {
     padding-top: 5rem;
+    background-color:#ccc;
+}
+
+.heading{
+    margin-left: 20%;
+    margin-top: 30px%;
+    margin-bottom: 20px;
+}
+
+
+
+.add-property-form {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid darkgrey;
+    border-radius: 8px;
+}
+
+.form-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-row .form-group {
+    width: 45%;
+    margin-right: 5%;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:rgb(72, 133, 247);
 }
