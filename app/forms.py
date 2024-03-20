@@ -11,5 +11,5 @@ class PropertyForm(FlaskForm):
     price = StringField('Price', validators=[InputRequired()])
     property_type = SelectField('Property Type', choices=[('House', 'House'),('Apartment', 'Apartment')], validators=[InputRequired()])
     location = StringField('Location', validators=[InputRequired()])
-    photo = FileField('Photo', validators=[FileRequired(), FileAllowed(['jpg', 'png'], 'Images only!')])
+    photo = FileField('Photo', validators=[FileRequired(), FileAllowed(['jpg', 'jpeg', 'png'], 'Images only!')])
     

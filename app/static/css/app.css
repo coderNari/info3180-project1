@@ -5,10 +5,9 @@ body {
 
 .heading{
     margin-left: 20%;
-    margin-top: 30px%;
+    margin-top: 30px;
     margin-bottom: 20px;
 }
-
 
 
 .add-property-form {
@@ -66,4 +65,116 @@ button {
 
 button:hover {
     background-color:rgb(72, 133, 247);
+}
+
+/* CSS for properties grid */
+.property-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.property-card {
+    width: calc(33.33% - 20px); /* Adjust width based on desired spacing */
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.property-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.location-pin {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.price {
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: aquamarine;
+    width: 40%;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* property styling */
+.property-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.property-details {
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.property-image-container {
+    flex-shrink: 0;
+}
+
+.property-image {
+    width: 300px;
+    border-radius: 8px;
+}
+
+.price-type-container {
+    margin-top: 20px;
+}
+
+.price-type {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price,
+.property-type {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+.email-realtor-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.email-realtor-btn:hover {
+    background-color: #0056b3;
 }
